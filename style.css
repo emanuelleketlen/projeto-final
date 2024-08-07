@@ -1,8 +1,11 @@
 .texto{
     font-family: 'Courier New', Courier, monospace;
 }
-    .card{
-        background-color: rgb(252, 155, 231);
-        border: 2px solid #51dbfd;
-    }
-    .S
+        
+img{
+    border-color: blue;
+}
+    
+.card2{
+    display: flex;
+}
