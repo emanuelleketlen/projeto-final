@@ -5,7 +5,20 @@
 img{
     border-color: blue;
 }
+.card2{
+    max-width: 80%;
+}
     
 .card2{
     display: flex;
+}
+.instagram{
+    width: 60px;
+}
+.facebook{
+    width: 60px;
+
+}
+.caso{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
