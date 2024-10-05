@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requisição POST</title>
+</head>
+<body>
+    <h1>Enviar Dados</h1>
+    <button id="sendRequest">Enviar Requisição</button>
+
+    <script>
+        document.getElementById('sendRequest').addEventListener('click', function() {
+            const data = {
+                idade: "string",
+                sexo: "string",
+                peso: "number",
+                altura: "number"
+            };
+
+            fetch("https://forge.withub.ai/api/triggers/5257a02d-c19b-4969-ab81-2206de86082c/execute/66eebf50139db3b6256bafb2", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Success:', data);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>
